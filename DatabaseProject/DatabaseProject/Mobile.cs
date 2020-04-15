@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public class telefony
+    public class Mobile
     {
         [Browsable(false)] //neuvidíme v datagridu
         public int id { get; set; }
-        public string vyrobek { get; set; }
-        public string model { get; set; }
-        public int pamet { get; set; }
-        public DateTime datumVydani { get; set; } = DateTime.Now;
+        public string Vyrobce { get; set; }
+        public string Model { get; set; }
+        public int Kapacita { get; set; }
+        public DateTime Datum { get; set; } = DateTime.Now;
 
     }
 }

@@ -10,37 +10,37 @@ namespace WindowsFormsApplication1
     {
         TestContext context = new TestContext();
 
-        public List<telefony> FindAll()
+        public List<Mobile> FindAll()
         {
-            return this.context.Telefons.ToList();
+            return this.context.Mobile.ToList();
         }
-        public telefony FindById(int id)
+        public Mobile FindById(int id)
         {
-            return this.context.Telefons.Find(id);
+            return this.context.Mobile.Find(id);
         }
-        public void Remove(telefony telefon)
+        public void Remove(Mobile telefon)
         {
-            this.context.Telefons.Remove(telefon);
+            this.context.Mobile.Remove(telefon);
             this.context.SaveChanges();
         }
 
-        public void Insert(telefony telefony)
+        public void Insert(Mobile telefony)
         {
-            this.context.Telefons.Add(telefony);
+            this.context.Mobile.Add(telefony);
             this.context.SaveChanges();
         }
-        public void Delete(telefony telefony)
+        public void Delete(Mobile telefony)
         {
-            this.context.Telefons.Remove(telefony);
+            this.context.Mobile.Remove(telefony);
             this.context.SaveChanges();
         }
-        public void Update(telefony telefony)
+        public void Update(Mobile telefony)
         {
-            telefony db = new telefony();
-            db.vyrobek = telefony.vyrobek;
-            db.model = telefony.model;
-            db.datumVydani = telefony.datumVydani;
-            db.pamet = telefony.pamet;
+            Mobile db = new Mobile();
+            db.Vyrobce = telefony.Vyrobce;
+            db.Model = telefony.Model;
+            db.Datum = telefony.Datum;
+            db.Kapacita = telefony.Kapacita;
 
             this.context.SaveChanges();
 

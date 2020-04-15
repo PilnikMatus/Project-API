@@ -35,3 +35,21 @@ D:\@PROGRAMKO\@SERVER CVICENI\DatabaseProject\DatabaseProject\obj\Debug\Database
 D:\@PROGRAMKO\@SERVER CVICENI\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.CopyComplete
 D:\@PROGRAMKO\@SERVER CVICENI\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.exe
 D:\@PROGRAMKO\@SERVER CVICENI\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.pdb
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.exe.config
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.exe
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.pdb
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\bin\Debug\EntityFramework.dll
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\bin\Debug\MySql.Data.dll
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\bin\Debug\EntityFramework.xml
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csprojAssemblyReference.cache
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\WindowsFormsApplication1.Add_or_Edit.resources
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.GenerateResource.cache
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.CoreCompileInputs.cache
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.CopyComplete
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.exe
+C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.pdb

@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
 
         public TelefonRepository repository { get; set; } = new TelefonRepository();
 
-        private telefony Telefony;
+        private Mobile Telefony;
 
         private Add_or_Edit Form2;
 
@@ -30,11 +30,11 @@ namespace WindowsFormsApplication1
 
         public void Refresh()
         {
-            List<telefony> telefons = this.repository.FindAll();
+            List<Mobile> Mobile = this.repository.FindAll();
 
             this.Model.Data.Clear();
 
-            foreach (telefony item in telefons)
+            foreach (Mobile item in Mobile)
             {
                 this.Model.Data.Add(item);
             }

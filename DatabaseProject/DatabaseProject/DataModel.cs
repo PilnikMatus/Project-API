@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1
 {
     public class DataModel : IListSource
     {
-        public BindingList<telefony> Data { get; set; } = new BindingList<telefony>();
+        public BindingList<Mobile> Data { get; set; } = new BindingList<Mobile>();
 
         public bool ContainsListCollection => true;
 

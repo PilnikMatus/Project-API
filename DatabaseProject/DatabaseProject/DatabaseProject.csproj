@@ -72,7 +72,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="telefony.cs" />
+    <Compile Include="Mobile.cs" />
     <Compile Include="TelefonRepository.cs" />
     <Compile Include="TestContext.cs" />
     <EmbeddedResource Include="Form1.resx">

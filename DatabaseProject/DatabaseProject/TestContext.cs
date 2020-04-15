@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
 {
     public class TestContext : DbContext
     {
-        public DbSet<telefony> Telefons { get; set; }
+        public DbSet<Mobile> Mobile { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

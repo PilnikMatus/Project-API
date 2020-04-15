@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     public partial class Add_or_Edit : Form
     {
         public TelefonRepository repository { get; set; }
-        public telefony telefony { get; set; } = new telefony();
+        public Mobile telefony { get; set; } = new Mobile();
         public DataModel Model = new DataModel();
         private Form1 Form1;
 
@@ -34,10 +34,10 @@ namespace WindowsFormsApplication1
         private void ButAdd_Click(object sender, EventArgs e)
         {
 
-            this.telefony.vyrobek = this.txVyrobek.Text;
-            this.telefony.model = this.txModel.Text;
-            this.telefony.pamet = Convert.ToInt32(this.cbPamet.Text);
-            this.telefony.datumVydani = this.dateTimePicker1.Value;
+            this.telefony.Vyrobce = this.txVyrobek.Text;
+            this.telefony.Model = this.txModel.Text;
+            this.telefony.Kapacita = Convert.ToInt32(this.cbPamet.Text);
+            this.telefony.Datum = this.dateTimePicker1.Value;
 
             if (this.telefony.id == 0)
             {
@@ -54,12 +54,12 @@ namespace WindowsFormsApplication1
             this.Form1.Refresh();
             this.Close();
         }
-        public void Write(telefony telefony)
+        public void Write(Mobile telefony)
         {
-            this.txVyrobek.Text = telefony.vyrobek;
-            this.txModel.Text = telefony.model;
-            this.cbPamet.SelectedValue = telefony.pamet.ToString();
-            this.dateTimePicker1.Value = telefony.datumVydani;
+            this.txVyrobek.Text = telefony.Vyrobce;
+            this.txModel.Text = telefony.Model;
+            this.cbPamet.SelectedValue = telefony.Kapacita.ToString();
+            this.dateTimePicker1.Value = telefony.Datum;
         }
         
     }
