@@ -10,40 +10,41 @@ using WebAPI.Models;
 namespace WebAPI.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class PeopleController : ApiController
+    public class adminController : ApiController
     {
-        private PersonRepository repository = new PersonRepository();
+        private adminRepository repository = new adminRepository();
 
         // GET: api/People
-        public IEnumerable<Person> Get()
+        public IEnumerable<admin> Get()
         {
             return this.repository.FindAll();
         }
 
-        // GET: api/People/5
-        public Person Get(int id)
+        // GET: api/People/5    
+        public admin Get(int id)
         {
             return this.repository.FindById(id);
         }
 
         // POST: api/People
-        public void Post([FromBody]Person value)
+        public void Post([FromBody] admin value)
         {
             this.repository.Create(value);
         }
 
+
         // PUT: api/People/5
-        public void Put(int id, [FromBody]Person value)
+        public void Put(int id, [FromBody] admin value)
         {
-            value.Id = id;
+            value.id = id;
             this.repository.Update(value);
         }
 
         // DELETE: api/People/5
         public void Delete(int id)
         {
-            Person person = this.repository.FindById(id);
-            this.repository.Delete(person);
+            admin admin = this.repository.FindById(id);
+            this.repository.Delete(admin);
         }
     }
 }

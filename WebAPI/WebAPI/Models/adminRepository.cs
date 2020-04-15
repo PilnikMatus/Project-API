@@ -5,28 +5,28 @@ using System.Web;
 
 namespace WebAPI.Models
 {
-    public class PersonRepository
+    public class adminRepository
     {
         private MyContext context = new MyContext();
 
-        public List<Person> FindAll()
+        public List<admin> FindAll()
         {
             return this.context.People.ToList();
         }
 
-        public Person FindById(int id)
+        public admin FindById(int id)
         {
             //return this.context.People.Where(x => x.Id == id).FirstOrDefault();
             return this.context.People.Find(id);
         }
 
-        public void Create(Person person)
+        public void Create(admin person)
         {
             this.context.People.Add(person);
             this.context.SaveChanges();
         }
 
-        public void Update(Person person)
+        public void Update(admin person)
         {
             /*Person current = this.FindById(person.Id);
 
@@ -40,7 +40,7 @@ namespace WebAPI.Models
             this.context.SaveChanges();
         }
 
-        public void Delete(Person person)
+        public void Delete(admin person)
         {
             this.context.People.Remove(person);
             this.context.SaveChanges();
