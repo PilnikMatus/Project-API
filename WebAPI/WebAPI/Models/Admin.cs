@@ -20,8 +20,4 @@ namespace WebAPI.Models
         public int log_repetation_number { get; set; }
         public int log_importance { get; set; }
     }
-    public enum Log_Repetation_Unit
-    {
-
-    }
 }
