@@ -5,12 +5,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApplication1.tables;
 
 namespace WindowsFormsApplication1
 {
     public class DataModel : IListSource
     {
-        public BindingList<Mobile> Data { get; set; } = new BindingList<Mobile>();
+        public BindingList<admin> Data { get; set; } = new BindingList<admin>();
 
         public bool ContainsListCollection => true;
 

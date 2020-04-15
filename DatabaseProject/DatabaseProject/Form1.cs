@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.tables;
 
 namespace WindowsFormsApplication1
 {
@@ -17,8 +18,11 @@ namespace WindowsFormsApplication1
         public TelefonRepository repository { get; set; } = new TelefonRepository();
 
         private Mobile Telefony;
+        private admin admin;
 
-        private Add_or_Edit Form2;
+        public AdminRepository AdminRepository { get; set; } = new AdminRepository();
+
+        //private Add_or_Edit Form2;
 
         public Form1()
         {
@@ -30,11 +34,11 @@ namespace WindowsFormsApplication1
 
         public void Refresh()
         {
-            List<Mobile> Mobile = this.repository.FindAll();
+            List<admin> admins = this.AdminRepository.FindAll();
 
             this.Model.Data.Clear();
 
-            foreach (Mobile item in Mobile)
+            foreach (admin item in admins)
             {
                 this.Model.Data.Add(item);
             }
@@ -51,12 +55,15 @@ namespace WindowsFormsApplication1
 
         private void ButtAdd_Click(object sender, EventArgs e)
         {
+            /*
             this.Form2 = new Add_or_Edit(this);
             this.Form2.ShowDialog();
+            */
         }
 
         private void ButEdit_Click(object sender, EventArgs e)
         {
+            /*
             this.Form2 = new Add_or_Edit(this);
 
             if (this.dataGridData.CurrentRow.Cells[0].Value == null)
@@ -71,6 +78,7 @@ namespace WindowsFormsApplication1
             this.Form2.telefony = this.Telefony;
             this.Form2.Write(this.Telefony);
             this.Form2.ShowDialog();
+            */
         }
     }
 }

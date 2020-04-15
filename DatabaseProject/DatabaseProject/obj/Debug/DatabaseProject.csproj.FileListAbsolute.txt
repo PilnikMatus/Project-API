@@ -53,3 +53,21 @@ C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\De
 C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.CopyComplete
 C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.exe
 C:\Users\Dan\Documents\GitHub\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.pdb
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.exe.config
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.exe
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\bin\Debug\DatabaseProject.pdb
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\bin\Debug\EntityFramework.dll
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\bin\Debug\EntityFramework.SqlServer.dll
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\bin\Debug\MySql.Data.dll
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\bin\Debug\EntityFramework.xml
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\bin\Debug\EntityFramework.SqlServer.xml
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csprojAssemblyReference.cache
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\obj\Debug\WindowsFormsApplication1.Add_or_Edit.resources
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.GenerateResource.cache
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.CoreCompileInputs.cache
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.CopyComplete
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.exe
+D:\@PROGRAMKO\@SERVER CVICENI\Project-API\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.pdb

@@ -4,12 +4,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApplication1.tables;
 
 namespace WindowsFormsApplication1
 {
     public class TestContext : DbContext
     {
         public DbSet<Mobile> Mobile { get; set; }
+        public DbSet<admin> Admins { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
