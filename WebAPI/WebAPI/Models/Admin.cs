@@ -13,7 +13,15 @@ namespace WebAPI.Models
         public string firstname { get; set; }
 
         public string lastname { get; set; }
-
+        public string email { get; set; }
+        public string password { get; set; }
         public int phone { get; set; }
+        public string log_repetation_unit { get; set; }
+        public int log_repetation_number { get; set; }
+        public int log_importance { get; set; }
+    }
+    public enum Log_Repetation_Unit
+    {
+
     }
 }
