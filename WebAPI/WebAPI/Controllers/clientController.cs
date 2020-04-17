@@ -4,47 +4,44 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Cors;
 using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class adminController : ApiController
+    public class clientController : ApiController
     {
-        private adminRepository repository = new adminRepository();
+        private clientRepository repository = new clientRepository();
 
-        
-        public IEnumerable<admin> Get()
+        // GET: api/client
+        public IEnumerable<client> Get()
         {
             return this.repository.FindAll();
         }
 
-        
-        public admin Get(int id)
+        // GET: api/client/5
+        public client Get(int id)
         {
             return this.repository.FindById(id);
         }
 
-        
-        public void Post([FromBody] admin value)
+        // POST: api/client
+        public void Post([FromBody]client value)
         {
             this.repository.Create(value);
         }
 
-
-        
-        public void Put(int id, [FromBody] admin value)
+        // PUT: api/client/5
+        public void Put(int id, [FromBody]client value)
         {
             value.id = id;
             this.repository.Update(value);
         }
 
-        
+        // DELETE: api/client/5
         public void Delete(int id)
         {
-            admin admin = this.repository.FindById(id);
-            this.repository.Delete(admin);
+            client client= this.repository.FindById(id);
+            this.repository.Delete(client);
         }
     }
 }

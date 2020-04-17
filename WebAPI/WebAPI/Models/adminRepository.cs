@@ -11,38 +11,30 @@ namespace WebAPI.Models
 
         public List<admin> FindAll()
         {
-            return this.context.People.ToList();
+            return this.context.Admins.ToList();
         }
 
         public admin FindById(int id)
         {
-            //return this.context.People.Where(x => x.Id == id).FirstOrDefault();
-            return this.context.People.Find(id);
+            return this.context.Admins.Find(id);
         }
 
-        public void Create(admin person)
+        public void Create(admin admin)
         {
-            this.context.People.Add(person);
+            this.context.Admins.Add(admin);
             this.context.SaveChanges();
         }
 
-        public void Update(admin person)
+        public void Update(admin admin)
         {
-            /*Person current = this.FindById(person.Id);
 
-            current.Name = person.Name;
-            current.Surname = person.Surname;
-            current.Age = person.Age;
-
-            this.context.SaveChanges();*/
-
-            this.context.Entry(person).State = System.Data.Entity.EntityState.Modified;
+            this.context.Entry(admin).State = System.Data.Entity.EntityState.Modified;
             this.context.SaveChanges();
         }
 
-        public void Delete(admin person)
+        public void Delete(admin admin)
         {
-            this.context.People.Remove(person);
+            this.context.Admins.Remove(admin);
             this.context.SaveChanges();
         }
     }
