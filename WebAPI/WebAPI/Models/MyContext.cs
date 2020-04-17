@@ -10,7 +10,8 @@ namespace WebAPI.Models
     [DbConfigurationType(typeof(MySql.Data.EntityFramework.MySqlEFConfiguration))]
     public class MyContext : DbContext
     {
-        public DbSet<admin> People { get; set; }
+        public DbSet<admin> admin { get; set; }
+        public DbSet<backup> backup { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -5,28 +5,28 @@ using System.Web;
 
 namespace WebAPI.Models
 {
-    public class adminRepository
+    public class backupRepository
     {
         private MyContext context = new MyContext();
 
-        public List<admin> FindAll()
+        public List<backup> FindAll()
         {
-            return this.context.admin.ToList();
+            return this.context.backup.ToList();
         }
 
-        public admin FindById(int id)
+        public backup FindById(int id)
         {
             //return this.context.People.Where(x => x.Id == id).FirstOrDefault();
-            return this.context.admin.Find(id);
+            return this.context.backup.Find(id);
         }
 
-        public void Create(admin person)
+        public void Create(backup Backup)
         {
-            this.context.admin.Add(person);
+            this.context.backup.Add(Backup);
             this.context.SaveChanges();
         }
 
-        public void Update(admin person)
+        public void Update(backup Backup)
         {
             /*Person current = this.FindById(person.Id);
 
@@ -36,13 +36,13 @@ namespace WebAPI.Models
 
             this.context.SaveChanges();*/
 
-            this.context.Entry(person).State = System.Data.Entity.EntityState.Modified;
+            this.context.Entry(Backup).State = System.Data.Entity.EntityState.Modified;
             this.context.SaveChanges();
         }
 
-        public void Delete(admin person)
+        public void Delete(backup Backup)
         {
-            this.context.admin.Remove(person);
+            this.context.backup.Remove(Backup);
             this.context.SaveChanges();
         }
     }
