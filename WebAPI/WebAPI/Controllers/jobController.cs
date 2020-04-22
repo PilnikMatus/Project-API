@@ -12,29 +12,29 @@ namespace WebAPI.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class jobController : ApiController
     {
-        private adminRepository repository = new adminRepository();
+        private jobRepository repository = new jobRepository();
 
 
-        public IEnumerable<admin> Get()
+        public IEnumerable<job> Get()
         {
             return this.repository.FindAll();
         }
 
 
-        public admin Get(int id)
+        public job Get(int id)
         {
             return this.repository.FindById(id);
         }
 
 
-        public void Post([FromBody] admin value)
+        public void Post([FromBody] job value)
         {
             this.repository.Create(value);
         }
 
 
 
-        public void Put(int id, [FromBody] admin value)
+        public void Put(int id, [FromBody] job value)
         {
             value.id = id;
             this.repository.Update(value);
@@ -43,8 +43,8 @@ namespace WebAPI.Controllers
 
         public void Delete(int id)
         {
-            admin admin = this.repository.FindById(id);
-            this.repository.Delete(admin);
+            job job = this.repository.FindById(id);
+            this.repository.Delete(job);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace WebAPI.Models
     public class backup
     {
         public int id { get; set; }
-        public string id_admin { get; set; }
+        public int id_admin { get; set; }
         public string name { get; set; }
         public string backup_type { get; set; }
         public string format_type { get; set; }

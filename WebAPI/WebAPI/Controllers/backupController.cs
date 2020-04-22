@@ -13,29 +13,29 @@ namespace WebAPI.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class backupController : ApiController
     {
-        private adminRepository repository = new adminRepository();
+        private backupRepository repository = new backupRepository();
 
 
-        public IEnumerable<admin> Get()
+        public IEnumerable<backup> Get()
         {
             return this.repository.FindAll();
         }
 
 
-        public admin Get(int id)
+        public backup Get(int id)
         {
             return this.repository.FindById(id);
         }
 
 
-        public void Post([FromBody] admin value)
+        public void Post([FromBody] backup value)
         {
             this.repository.Create(value);
         }
 
 
 
-        public void Put(int id, [FromBody] admin value)
+        public void Put(int id, [FromBody] backup value)
         {
             value.id = id;
             this.repository.Update(value);
@@ -44,8 +44,8 @@ namespace WebAPI.Controllers
 
         public void Delete(int id)
         {
-            admin admin = this.repository.FindById(id);
-            this.repository.Delete(admin);
+            backup backup = this.repository.FindById(id);
+            this.repository.Delete(backup);
         }
     }
 }

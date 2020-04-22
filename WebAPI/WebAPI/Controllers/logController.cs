@@ -13,29 +13,29 @@ namespace WebAPI.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class logController : ApiController
     {
-        private adminRepository repository = new adminRepository();
+        private logRepository repository = new logRepository();
 
 
-        public IEnumerable<admin> Get()
+        public IEnumerable<log> Get()
         {
             return this.repository.FindAll();
         }
 
 
-        public admin Get(int id)
+        public log Get(int id)
         {
             return this.repository.FindById(id);
         }
 
 
-        public void Post([FromBody] admin value)
+        public void Post([FromBody] log value)
         {
             this.repository.Create(value);
         }
 
 
 
-        public void Put(int id, [FromBody] admin value)
+        public void Put(int id, [FromBody] log value)
         {
             value.id = id;
             this.repository.Update(value);
@@ -44,8 +44,8 @@ namespace WebAPI.Controllers
 
         public void Delete(int id)
         {
-            admin admin = this.repository.FindById(id);
-            this.repository.Delete(admin);
+            log log = this.repository.FindById(id);
+            this.repository.Delete(log);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace WebAPI.Models
     public class job
     {
         public int id { get; set; }
-        public int id_clinet { get; set; }
+        public int id_client { get; set; }
         public int id_backup { get; set; }
     }
 }
