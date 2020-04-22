@@ -4,45 +4,48 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using WebAPI.Models;
 using WebAPI.Models.Repositories;
 
 namespace WebAPI.Controllers
 {
-    public class clientController : ApiController
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+    public class backup_timeController : ApiController
     {
-        private clientRepository repository = new clientRepository();
+        private adminRepository repository = new adminRepository();
 
-        // GET: api/client
-        public IEnumerable<client> Get()
+
+        public IEnumerable<admin> Get()
         {
             return this.repository.FindAll();
         }
 
-        // GET: api/client/5
-        public client Get(int id)
+
+        public admin Get(int id)
         {
             return this.repository.FindById(id);
         }
 
-        // POST: api/client
-        public void Post([FromBody]client value)
+
+        public void Post([FromBody] admin value)
         {
             this.repository.Create(value);
         }
 
-        // PUT: api/client/5
-        public void Put(int id, [FromBody]client value)
+
+
+        public void Put(int id, [FromBody] admin value)
         {
             value.id = id;
             this.repository.Update(value);
         }
 
-        // DELETE: api/client/5
+
         public void Delete(int id)
         {
-            client client= this.repository.FindById(id);
-            this.repository.Delete(client);
+            admin admin = this.repository.FindById(id);
+            this.repository.Delete(admin);
         }
     }
 }
