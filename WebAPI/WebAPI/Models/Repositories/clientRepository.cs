@@ -14,7 +14,7 @@ namespace WebAPI.Models.Repositories
             return this.context.Clients.ToList();
         }
 
-        public client FindById(int id)
+        public client FindById(string id)
         {
             return this.context.Clients.Find(id);
         }

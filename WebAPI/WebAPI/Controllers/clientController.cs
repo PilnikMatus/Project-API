@@ -22,7 +22,7 @@ namespace WebAPI.Controllers
         }
 
         // GET: api/client/5
-        public client Get(int id)
+        public client Get(string id)
         {
             return this.repository.FindById(id);
         }
@@ -34,14 +34,14 @@ namespace WebAPI.Controllers
         }
 
         // PUT: api/client/5
-        public void Put(int id, [FromBody]client value)
+        public void Put(string id, [FromBody]client value)
         {
             value.id = id;
             this.repository.Update(value);
         }
 
         // DELETE: api/client/5
-        public void Delete(int id)
+        public void Delete(string id)
         {
             client client= this.repository.FindById(id);
             this.repository.Delete(client);
