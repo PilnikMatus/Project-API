@@ -200,6 +200,7 @@
     <Compile Include="Controllers\jobController.cs" />
     <Compile Include="Controllers\job_historyController.cs" />
     <Compile Include="Controllers\logController.cs" />
+    <Compile Include="Controllers\sessionsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -223,7 +224,9 @@
     <Compile Include="Models\Repositories\jobRepository.cs" />
     <Compile Include="Models\Repositories\job_historyRepository.cs" />
     <Compile Include="Models\Repositories\logRepository.cs" />
+    <Compile Include="Models\Repositories\sessionsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Randomizer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
