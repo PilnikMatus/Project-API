@@ -27,10 +27,21 @@ namespace WebAPI.Controllers
             return this.repository.FindById(id);
         }
 
+        /*       
         // POST: api/client
         public void Post([FromBody]client value)
         {
             this.repository.Create(value);
+        }
+        */
+
+        public client Post([FromBody]client client)
+        {
+            client.id = Authorization.CreateClientId();
+
+            this.repository.Create(client);
+
+            return client;
         }
 
         // PUT: api/client/5

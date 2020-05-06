@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebAPI.Models.Repositories
 {
-    public class sessionsRepository
+    public class GetBackupsRepository
     {
         private MyContext context = new MyContext();
 
@@ -14,13 +14,13 @@ namespace WebAPI.Models.Repositories
             return this.context.Admins.ToList();
         }
 
-        public admin FindByEmail(string email)
+        public List<job> FindJobByIdClient(string thisClient)
         {
-            return this.context.Admins.FirstOrDefault(admin => admin.email == email);
+            return this.context.Jobs.Where(job => job.id_client == thisClient).ToList();
         }
-        public admin FindByToken(string token)
+        public backup FindBackupByIdBackup(int idBackup)
         {
-            return this.context.Admins.FirstOrDefault(admin => admin.token == token);
+            return this.context.Backups.Find(idBackup);
         }
 
         public void Create(admin admin)

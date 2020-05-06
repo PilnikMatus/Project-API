@@ -195,6 +195,10 @@
     <Compile Include="Controllers\backup_targetController.cs" />
     <Compile Include="Controllers\backup_timeController.cs" />
     <Compile Include="Controllers\clientController.cs" />
+    <Compile Include="Controllers\GetBackupSourcesController.cs" />
+    <Compile Include="Controllers\GetBackupsController.cs" />
+    <Compile Include="Controllers\GetBackupTargetsController.cs" />
+    <Compile Include="Controllers\GetBackupTimesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\adminController.cs" />
     <Compile Include="Controllers\jobController.cs" />
@@ -221,12 +225,17 @@
     <Compile Include="Models\MyContext.cs" />
     <Compile Include="Models\admin.cs" />
     <Compile Include="Models\Repositories\adminRepository.cs" />
+    <Compile Include="Models\Repositories\GetBackupsRepository.cs" />
+    <Compile Include="Models\Repositories\GetBackupSourcesRepository.cs" />
+    <Compile Include="Models\Repositories\GetBackupTargetsRepository.cs" />
+    <Compile Include="Models\Repositories\GetBackupTimesRepository.cs" />
     <Compile Include="Models\Repositories\jobRepository.cs" />
     <Compile Include="Models\Repositories\job_historyRepository.cs" />
     <Compile Include="Models\Repositories\logRepository.cs" />
     <Compile Include="Models\Repositories\sessionsRepository.cs" />
+    <Compile Include="Models\Token.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Randomizer.cs" />
+    <Compile Include="Authorization.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

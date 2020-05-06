@@ -39,9 +39,9 @@ namespace WebAPI.Controllers
                 //string hash = Randomizer.GetMd5Hash(md5Hash, source); //vytvorení hashe
 
                 string hash = admin.password;
-                if (Randomizer.VerifyMd5Hash(md5Hash, value.password, hash))
+                if (Authorization.VerifyMd5Hash(md5Hash, value.password, hash))
                 {
-                    token = Randomizer.CreateToken();
+                    token = Authorization.CreateToken();
                 }
                 else
                 {

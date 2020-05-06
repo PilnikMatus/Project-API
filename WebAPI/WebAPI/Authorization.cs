@@ -7,7 +7,7 @@ using System.Web;
 
 namespace WebAPI
 {
-    public static class Randomizer
+    public static class Authorization
     {
         public static string CreateClientId()
         {
@@ -26,7 +26,7 @@ namespace WebAPI
         public static string CreateToken()
         {
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var stringChars = new char[10];
+            var stringChars = new char[20];
             var random = new Random();
 
             for (int i = 0; i < stringChars.Length; i++)
