@@ -27,7 +27,7 @@ namespace WebAPI.Controllers
                 backups.AddRange(this.repository.FindBackupTimeByIdBackup(jobs[i].id_backup));
             }
 
-            return backups;  //array backupů --- časů, sources, targets
+            return backups; 
         }
     }
 }
