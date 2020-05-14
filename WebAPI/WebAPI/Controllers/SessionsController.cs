@@ -29,7 +29,7 @@ namespace WebAPI.Controllers
         }*/
 
 
-        public string Post([FromBody] admin value) //POST SESSIONS 
+        public admin Post([FromBody] admin value) //POST SESSIONS 
         {
             admin admin = this.repository.FindByEmail(value.email); //GET admina podle emailu
             if (admin == null)
@@ -58,7 +58,7 @@ namespace WebAPI.Controllers
 
             this.repository.Update(admin); //nahraní tokenu k adminovi
 
-            return token;
+            return admin;
         }
 
 
