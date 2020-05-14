@@ -32,7 +32,8 @@ namespace WebAPI.Controllers
         public string Post([FromBody] admin value) //POST SESSIONS 
         {
             admin admin = this.repository.FindByEmail(value.email); //GET admina podle emailu
-
+            if (admin == null)
+                return null;
             string token;
             using (MD5 md5Hash = MD5.Create())
             {
@@ -45,7 +46,7 @@ namespace WebAPI.Controllers
                 }
                 else
                 {
-                    token = "hesla se neshodují";
+                    token = null;
                     // https://stackoverflow.com/questions/10655350/returning-http-status-code-from-web-api-controller
                     //co s tim?
                     //return new HttpResponseMessage(HttpStatusCode.NotModified);
@@ -71,7 +72,7 @@ namespace WebAPI.Controllers
         public void Delete([FromBody] admin value)
         {
             admin admin = this.repository.FindByToken(value.token);
-            admin.token = "";
+            admin.token = null;
             this.repository.Update(admin);
         }
     }
