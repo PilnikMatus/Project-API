@@ -214,6 +214,7 @@
     <Compile Include="Models\backup_target.cs" />
     <Compile Include="Models\backup_time.cs" />
     <Compile Include="Models\client.cs" />
+    <Compile Include="Models\fullBackupInfo.cs" />
     <Compile Include="Models\job.cs" />
     <Compile Include="Models\job_history.cs" />
     <Compile Include="Models\log.cs" />

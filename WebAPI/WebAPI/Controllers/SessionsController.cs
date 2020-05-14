@@ -17,10 +17,10 @@ namespace WebAPI.Controllers
         private sessionsRepository repository = new sessionsRepository();
 
 
-        public IEnumerable<admin> Get() //GET SESSIONS
+        /*public IEnumerable<admin> Get() //GET SESSIONS
         {
             return this.repository.FindAll();
-        }
+        }*/
 
 
  /*       public admin Get(int id) //GET SESSIONS/id
@@ -31,7 +31,7 @@ namespace WebAPI.Controllers
 
         public string Post([FromBody] admin value) //POST SESSIONS 
         {
-            admin admin = this.repository.FindByEmail(value.email); //GET admina podle emailu(username)
+            admin admin = this.repository.FindByEmail(value.email); //GET admina podle emailu
 
             string token;
             using (MD5 md5Hash = MD5.Create())
@@ -46,7 +46,9 @@ namespace WebAPI.Controllers
                 else
                 {
                     token = "hesla se neshodují";
-                    //hesla se neshodují
+                    // https://stackoverflow.com/questions/10655350/returning-http-status-code-from-web-api-controller
+                    //co s tim?
+                    //return new HttpResponseMessage(HttpStatusCode.NotModified);
                 }
             }
 

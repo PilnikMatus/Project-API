@@ -27,7 +27,6 @@ namespace WebAPI.Models.Repositories
 
         public void Update(backup backup)
         {
-
             this.context.Entry(backup).State = System.Data.Entity.EntityState.Modified;
             this.context.SaveChanges();
         }

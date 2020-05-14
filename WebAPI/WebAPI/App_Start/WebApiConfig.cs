@@ -20,6 +20,10 @@ namespace WebAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Routes.MapHttpRoute(
+                name: "BackupApi",
+                routeTemplate: "api/{controller}/{id}/{expand}"
+            );
         }
     }
 }

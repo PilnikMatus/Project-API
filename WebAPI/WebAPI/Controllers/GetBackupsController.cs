@@ -17,15 +17,19 @@ namespace WebAPI.Controllers
         private GetBackupsRepository repository = new GetBackupsRepository();
 
 
-        public IEnumerable<backup> POST([FromBody] client client) //POST GETBACKUPS --- vrátí všechny backupy tohoto clienta
+        public IEnumerable<fullBackupInfo> POST([FromBody] client client) //POST GETBACKUPS --- vrátí všechny backupy tohoto clienta
         {
-            List<job> jobs = this.repository.FindJobByIdClient(client.id);
-            List<backup> backups = new List<backup>();
+            List<job> jobs = this.repository.FindJobByIdClient(client.id); //zjisti id jobů tohoto klienta
+            List<fullBackupInfo> backups = new List<fullBackupInfo>(); 
 
             for (int i = 0; i < jobs.Count; i++)
             {
                 backups.Add(this.repository.FindBackupByIdBackup(jobs[i].id_backup));
+                backups[i].backup_target.AddRange(this.repository.FindBackupTargetByIdBackup(jobs[i].id_backup));
+                backups[i].backup_source.AddRange(this.repository.FindBackupSourceByIdBackup(jobs[i].id_backup));
+                backups[i].backup_time.AddRange(this.repository.FindBackupTimeByIdBackup(jobs[i].id_backup));
             }
+
 
             return backups;  //array backupů --- časů, sources, targets
         }

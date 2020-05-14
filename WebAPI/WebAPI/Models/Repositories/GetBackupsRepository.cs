@@ -18,9 +18,25 @@ namespace WebAPI.Models.Repositories
         {
             return this.context.Jobs.Where(job => job.id_client == thisClient).ToList();
         }
-        public backup FindBackupByIdBackup(int idBackup)
+        public fullBackupInfo FindBackupByIdBackup(int idBackup)
         {
-            return this.context.Backups.Find(idBackup);
+            backup backup = new backup();
+            backup = this.context.Backups.Find(idBackup);
+
+            fullBackupInfo fbi = new fullBackupInfo(backup);
+            return fbi;
+        }
+        public List<backup_target> FindBackupTargetByIdBackup(int idBackup)
+        {
+            return this.context.Backup_targets.Where(target => target.id_backup == idBackup).ToList();
+        }
+        public List<backup_time> FindBackupTimeByIdBackup(int idBackup)
+        {
+            return this.context.Backup_times.Where(time => time.id_backup == idBackup).ToList();
+        }
+        public List<backup_source> FindBackupSourceByIdBackup(int idBackup)
+        {
+            return this.context.Backup_sources.Where(source => source.id_backup == idBackup).ToList();
         }
 
         public void Create(admin admin)

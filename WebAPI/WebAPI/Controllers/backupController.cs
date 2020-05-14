@@ -22,11 +22,11 @@ namespace WebAPI.Controllers
         }
 
 
-        public backup Get(int id)
+     /*   public fullBackupInfo Get(int id, string expand = null)
         {
+/////////////////////////////////////////////////////////////////////
             return this.repository.FindById(id);
-        }
-
+        }*/
 
         public void Post([FromBody] backup value)
         {
