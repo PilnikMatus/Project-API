@@ -17,6 +17,10 @@ namespace WebAPI.Controllers
     {
         private backupRepository repository = new backupRepository();
 
+        public IEnumerable<backup> Get()
+        {
+            return this.repository.FindAll();
+        }
 
         public fullBackupAndClientsInfo Get(int id)
         {

@@ -9,7 +9,10 @@ namespace WebAPI.Models.Repositories
     {
         private MyContext context = new MyContext();
 
-
+        public List<backup> FindAll()
+        {
+            return this.context.Backups.ToList();
+        }
         public fullBackupAndClientsInfo FindById(int id)
         {
             backup backup = new backup();

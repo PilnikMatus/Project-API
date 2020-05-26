@@ -20,6 +20,7 @@ namespace WebAPI.Models
         public DbSet<job> Jobs { get; set; }
         public DbSet<job_history> Job_histories { get; set; }
         public DbSet<log> Logs { get; set; }
+        public DbSet<fullBackupAndClientsInfo> fullBackupAndClientsInfo { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
