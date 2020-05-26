@@ -23,7 +23,7 @@ namespace WebAPI.Models
         {
             this.id = b.id;
             this.id_admin = b.id_admin;
-            this.name = b.backup_type;
+            this.name = b.name;
             this.backup_type = b.backup_type;
             this.format_type = b.format_type;
             this.last_possible_backup_date = b.last_possible_backup_date;
