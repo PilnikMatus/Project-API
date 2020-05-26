@@ -9,31 +9,56 @@ namespace WebAPI.Models.Repositories
     {
         private MyContext context = new MyContext();
 
-        public List<backup> FindAll()
+
+        public fullBackupAndClientsInfo FindById(int id)
         {
-            return this.context.Backups.ToList();
+            backup backup = new backup();
+            backup = this.context.Backups.Find(id);
+
+            fullBackupAndClientsInfo fbi = new fullBackupAndClientsInfo(backup);
+
+            return fbi;
+        }
+        public List<client> FindClientByIdBackup(int idBackup)
+        {
+            List<job> jobs = this.context.Jobs.Where(target => target.id_backup == idBackup).ToList();
+            List<client> clients = new List<client>();
+            foreach (job item in jobs)
+            {
+                if(this.context.Clients.Find(item.id_client) != null)
+                    clients.Add(this.context.Clients.Find(item.id_client));
+            }
+
+            return clients;
+        }
+        public List<backup_target> FindBackupTargetByIdBackup(int idBackup)
+        {
+            return this.context.Backup_targets.Where(target => target.id_backup == idBackup).ToList();
+        }
+        public List<backup_time> FindBackupTimeByIdBackup(int idBackup)
+        {
+            return this.context.Backup_times.Where(time => time.id_backup == idBackup).ToList();
+        }
+        public List<backup_source> FindBackupSourceByIdBackup(int idBackup)
+        {
+            return this.context.Backup_sources.Where(source => source.id_backup == idBackup).ToList();
         }
 
-        public backup FindById(int id)
+        public void Create(admin admin)
         {
-            return this.context.Backups.Find(id);
-        }
-
-        public void Create(backup backup)
-        {
-            this.context.Backups.Add(backup);
+            this.context.Admins.Add(admin);
             this.context.SaveChanges();
         }
 
-        public void Update(backup backup)
+        public void Update(admin admin)
         {
-            this.context.Entry(backup).State = System.Data.Entity.EntityState.Modified;
+            this.context.Entry(admin).State = System.Data.Entity.EntityState.Modified;
             this.context.SaveChanges();
         }
 
-        public void Delete(backup backup)
+        public void Delete(admin admin)
         {
-            this.context.Backups.Remove(backup);
+            this.context.Admins.Remove(admin);
             this.context.SaveChanges();
         }
     }

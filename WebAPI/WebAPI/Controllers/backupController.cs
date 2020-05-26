@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Principal;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using WebAPI.Models;
 using WebAPI.Models.Repositories;
+using System.Security.Cryptography;
 
 namespace WebAPI.Controllers
 {
@@ -16,36 +18,23 @@ namespace WebAPI.Controllers
         private backupRepository repository = new backupRepository();
 
 
-        public IEnumerable<backup> Get()
+        public fullBackupAndClientsInfo Get(int id)
         {
-            return this.repository.FindAll();
+            fullBackupAndClientsInfo backup = this.repository.FindById(id); //stáhne backup
+
+
+            backup.clients = this.repository.FindClientByIdBackup(id);
+            backup.backup_source = this.repository.FindBackupSourceByIdBackup(id);
+            backup.backup_target = this.repository.FindBackupTargetByIdBackup(id);
+            backup.backup_time = this.repository.FindBackupTimeByIdBackup(id);
+
+            return backup;  //array backupů --- časů, sources, targets
         }
 
-
-     /*   public fullBackupInfo Get(int id, string expand = null)
+        public void POST([FromBody] fullBackupAndClientsInfo backupInfo)
         {
-/////////////////////////////////////////////////////////////////////
-            return this.repository.FindById(id);
-        }*/
-
-        public void Post([FromBody] backup value)
-        {
-            this.repository.Create(value);
+            //dodělat post
         }
 
-
-
-        public void Put(int id, [FromBody] backup value)
-        {
-            value.id = id;
-            this.repository.Update(value);
-        }
-
-
-        public void Delete(int id)
-        {
-            backup backup = this.repository.FindById(id);
-            this.repository.Delete(backup);
-        }
     }
 }
